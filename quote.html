@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -29,6 +29,15 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/quote.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "jZzvLSrMjHOzmgX-0",
+      });
+   })();
+</script>
 </head>
 
 <body>
@@ -43,8 +52,7 @@
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
- 
+                <div class="d-inline-flex align-items-center" style="height: 45px;"> 
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+353 87 387 5175</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>service@lompatlogistics.ie</small>
                 </div>
@@ -68,7 +76,6 @@
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
                 <img class="img-fluid w-25" src="img/Lompat_logistics.jpg" alt="Image">
-
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -76,9 +83,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="services.html" class="nav-item nav-link">Services</a>
-                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    <a href="about.html" class="nav-item nav-link ">About</a>
+                    <a href="services.html" class="nav-item nav-link ">Services</a>
+                    <a href="services.html" class="nav-item nav-link active">Quote</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                  
                         </div>
                     </div>
@@ -86,11 +94,11 @@
                  
         </nav>
 
-        <div class="container-fluid bg-primary py-5 bg-header" style="margin-top: 0px;">
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 14px;">
             <div class="row py-5">
-                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="margin-top: 15px;" >
-                    <h5 class="fw-bold text-primary text-uppercase text-white ">Contact Us</h5>
-                    <h1 class="mb-0 text-white">If You Have Any Query, Feel Free To Contact Us</h1>
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Request a Quote</h1>
+                  
                 </div>
             </div>
         </div>
@@ -98,47 +106,69 @@
     <!-- Navbar End -->
 
 
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -5px;">
-        <div class="container py-5">
-                <div class="container">
-                    <div class="row g-5 justify-content-center">
-                        <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
                     </div>
-                </div>            
+                </div>
             </div>
-         </div>
+        </div>
     </div>
-</div>
-<!-- Contact End -->
+    <!-- Full Screen Search End -->
 
 
-  
+<!-- Quote Start style="height: 50vh;"-->
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;" >
+    <div class="container py-5">
+        <div class="container">
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">       
+            
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="name">Job Location:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="serviceType">Type of Service:</label>
+                <select id="serviceType" name="serviceType" required>
+                    <option value="furnitureDelivery">Furniture Delivery</option>
+                    <option value="houseMove">House Move</option>
+                    <option value="studentMove">Student Move</option>
+                    <option value="other">Other</option>
+                </select>
+    
+                <label for="details">Additional Details:</label>
+                <textarea id="details" name="details" rows="4" placeholder="Please provide any additional information..." required></textarea>
+    
+                <button class="btn btn-primary" onclick="sendMail()">Request Quote</button>
+            </form>
+        </div>       
+</div>        </div>       
+</div></div>
+<!-- Quote End -->
+
+
+
 
  <!-- Footer Start -->
  <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="row gx-0 justify-content-center">
+    <div class="container">
         <div class="row gx-5">
             <div class="col-lg-4 col-md-6 footer-about">
                 <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
