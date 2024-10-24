@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./compose-files/conf/default.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ../backend/staticfiles:/app/static:ro
+    environment:
+      TSBVANS_HOST: "// to be filled TSBVANS.COM"
+    env_file:
+      - ./.env
+    networks:
+      tsbvans-nw:

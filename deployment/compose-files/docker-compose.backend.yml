@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  app:
+    container_name: app
+    build:
+      context: ../backend
+    image: tsbvans/backend:latest
+    ports:
+      - "8000:8000"
+    networks:
+      - tsbvans-nw
+    env_file:
+      - ./.env
+    command: sh -c "ls && gunicorn --bind 0.0.0.0:8000 --timeout 300 --access-logfile - --error-logfile - backend.wsgi"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
