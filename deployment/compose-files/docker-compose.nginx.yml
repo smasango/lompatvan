@@ -11,7 +11,7 @@ services:
       - /etc/letsencrypt:/etc/letsencrypt
       - ../backend/staticfiles:/app/static:ro
     environment:
-      TSBVANS_HOST: "// to be filled TSBVANS.COM"
+      TSBVANS_HOST: "tsbcvans.ie"
     env_file:
       - ./.env
     networks:

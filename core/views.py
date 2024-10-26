@@ -10,7 +10,7 @@ def homepage(request):
             # Save the form data to the database
             contact_message = ContactMessage(
                 name=form.cleaned_data['name'],
-                email=form.cleaned_data['email'],
+                phone_number=form.cleaned_data['phone_number'],
                 subject=form.cleaned_data['subject'],
                 message=form.cleaned_data['message']
             )

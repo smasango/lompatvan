@@ -3,7 +3,7 @@ services:
   app:
     container_name: app
     build:
-      context: ../backend
+      context: ..
     image: tsbvans/backend:latest
     ports:
       - "8000:8000"
