@@ -1,3 +1,4 @@
+# models.py
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from zoneinfo import ZoneInfo
@@ -13,17 +14,37 @@ class ContactMessage(models.Model):
         help_text=_("Enter your phone number."),
     ) 
     subject = models.CharField(_("Subject"), max_length=200)
-    message = models.TextField(_("Messsage"),)
-    created_at = models.DateTimeField(_("Created time"),auto_now_add=True)
+    message = models.TextField(_("Message"))
+    created_at = models.DateTimeField(_("Created time"), auto_now_add=True)
 
     def __str__(self):
         return f"Message from {self.name} - {self.subject}"
 
     @property
     def formatted_created_at(self):
-        """
-        Returns the created_at timestamp formatted in the Ireland timezone.
-        Example format: '2024-04-27 14:30:00'
-        """
         ireland_timezone = ZoneInfo('Europe/Dublin')
         return self.created_at.astimezone(ireland_timezone).strftime('%Y-%m-%d %H:%M:%S')
+
+
+class Quote(models.Model):
+    from_location = models.CharField(max_length=50)
+    to_location = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return f'Quote from {self.name}'
+
+
+class Subscriber(models.Model):
+    email = models.EmailField(unique=True)
+    date_subscribed = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['-date_subscribed']
+
+    def __str__(self):
+        return self.email

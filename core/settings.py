@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.tsbvans.ie', 'tsbvans.ie']
 
 
 INSTALLED_APPS = [
@@ -35,9 +35,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
-ALLOWED_HOSTS = [
-    'tsbvans.ie'
-]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

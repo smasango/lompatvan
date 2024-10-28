@@ -2,20 +2,40 @@
 <html lang="en">
 
     {% load static %}
-
-<title>TSBVANS</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="" async defer></script>
 
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free HTML Templates" name="keywords">
-        <meta content="Free HTML Templates" name="description">
 
         <!-- Favicon -->
-        <link href="{% static 'img/favicon.ico' %}" rel="icon">
+        <link href="{% static 'img/favicon.png' %}" rel="icon">
 
+                <!-- Primary Meta Tags -->
+        <title>TSB Vans | Reliable Man with a Van Services in Dublin</title>
+        <meta name="description" content="Looking for reliable and affordable man with a van services in Dublin? TSB Vans offers furniture delivery, van hire, and moving services across Dublin. Contact us today!">
+        <meta name="keywords" content="Man with a Van in Dublin, Dublin Furniture Delivery, Moving Services in Dublin, Van hire in North Dublin, Van hire in South Dublin, Affordable Van Hire Dublin, Reliable Man with a Van Services in Dublin">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.tsbvans.ie/">
+        <meta property="og:title" content="TSB Vans | Reliable Man with a Van Services in Dublin">
+        <meta property="og:description" content="Looking for reliable and affordable man with a van services in Dublin? TSB Vans offers furniture delivery, van hire, and moving services across Dublin. Contact us today!">
+        <meta property="og:image" content="https://www.tsbvans.ie/path-to-your-image.jpg">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://www.tsbvans.ie/">
+        <meta name="twitter:title" content="TSB Vans | Reliable Man with a Van Services in Dublin">
+        <meta name="twitter:description" content="Looking for reliable and affordable man with a van services in Dublin? TSB Vans offers furniture delivery, van hire, and moving services across Dublin. Contact us today!">
+        <meta name="twitter:image" content="https://www.tsbvans.ie/path-to-your-image.jpg">
+
+        <!-- Canonical Link -->
+        <link rel="canonical" href="https://www.tsbvans.ie/">
+
+        <!-- Robots Meta Tag -->
+        <meta name="robots" content="index, follow">
 
  
 
@@ -39,7 +59,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
 
         <!-- Icon Font Stylesheet -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -72,17 +92,21 @@
             <div class=" row align-items-center">
                 <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-flex align-items-center"> 
-                        <a class="me-4 text-secondary text-decoration-none"><i class="fa fa-phone-alt me-2"></i> +353 87 387 5175</a>
-                        <a class="text-secondary text-decoration-none d-flex align-items-center gap-3"><i class="far fa-envelope"></i> service@lompatlogistics.ie</a>
+                        <a href="tel:+353873875175" class="me-4 text-secondary text-decoration-none">
+                            <i class="fa fa-phone-alt me-2"></i> +353 87 387 5175
+                        </a>
+                        <a href="mailto:tsbvans@gmail.com" class="text-secondary text-decoration-none d-flex align-items-center gap-3">
+                            <i class="far fa-envelope"></i> tsbvans@gmail.com
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class=" align-items-center" >
-                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle " href=""><i class="fab fa-youtube fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href="https://x.com/tsbvans"><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=61565337711864"><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/tsbvans-manwithavan"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle me-2" href="https://www.instagram.com/tsbvans/"><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-secondary btn-sm-square rounded-circle " href="https://www.youtube.com/@TSBVANS"><i class="fab fa-youtube fw-normal"></i></a>
                     </div>
                 </div>
             </div>
@@ -116,9 +140,8 @@
                         <a class="nav-link" href="#contactus">Contact Us</a>
                       </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                      <button class="btn btn-outline-danger rounded-pill px-4" type="submit">Get Quote</button>
-                    </form>
+
+                      <button class="btn btn-outline-danger rounded-pill px-4" data-wow-delay="0.9s" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Quote</button>
                   </div>
                 </div>
               </nav>
@@ -131,32 +154,42 @@
     <div class="container-xxl">
         <div class="row align-items-lg-center">
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 p-3">
-                <h6 class="text-secondary fs-5  "><span class="border-bottom border-light pb-2">Tailored to your needs and budget </span> </h6>
+                <h6 class="text-secondary fs-5  "><span class="border-bottom border-light pb-2">Experienced, Reliable, and Affordable Man with a Van</span> </h6>
                 <h1 class="tfeature-text">
                     Man with a van
                 </h1>
-                <p class="text-secondary">A delivery van service specializes in transporting goods efficiently from one location to another. These vans are designed for various cargo types, offering flexibility for businesses and individuals. Timely delivery and reliable service are essential, enhancing customer satisfaction and supporting the logistics industry.</p>
+                <p class="text-secondary">Looking for a reliable and cost-effective solution for your
+                    moving and transportation needs? Look no further. Our
+                    experienced team provides a professional &quot;Man with a Van&quot;
+                    service tailored to your requirements. Trust us for efficient,
+                    high-quality service every time.
+                </p>
 
                 <div class="d-flex align-items-center gap-3 mt-3">
-                    <button class="btn btn-danger rounded-pill px-4" type="submit">Get Quote</button>
-                    <button class="btn btn-outline-dark rounded-pill px-4" type="submit">How it work</button>
+                    <button class="btn btn-danger rounded-pill px-4" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Request a Free Quote</button>
+                    <a class="btn btn-outline-dark rounded-pill px-4 text-decoration-none" href="#howitwork">How it work</a>
                 </div>
 
                 <div class="d-flex align-items-center gap-5 mt-5">
-                    <div>
-                        <h1 class="mote-text mb-0 "> 350+</h1>
+                    <a href="#clients-review" class="text-decoration-none text-black-50">
+                        <h1 class="mote-text mb-0 " ><span data-toggle="counter-up"> 350  </span>+</h1>
                         <p class="client-feature">Happy Clients </p>
-                    </div>
-                    <div>
-                        <h1 class="mote-text mb-0"> 2k+</h1>
+                    </a>
+                    <a href="#clients-review" class="text-decoration-none text-black-50">
+                        <h1 class="mote-text mb-0"><span  data-toggle="counter-up">2000 </span>+</h1>
                         <p class="client-feature">Jobs Done </p>
-                    </div>
+                    </a>
                 </div>
 
                 
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 p-3">
-                    <img class="hero-image" src="{% static '/img/heroimage.png' %}"  alt="TSBvans">
+                
+                <div class="position-relative">
+                        <img class="hero-image wow fadeInRight" src="{% static '/img/heroimage.png' %}"  alt="TSBvans">
+                        <img class="hero-image-2 wow fadeInTop" src="{% static '/img/hero-banner-img-2.png' %}"  alt="TSBvans2">
+                        <img class="hero-image-3 wow fadeInBottomt" src="{% static '/img/hero-banner-img-3.png' %}"  alt="TSBvans3">
+                    </div>
             </div>
         </div>
 
@@ -166,15 +199,88 @@
 
 <section class="container-fluid py-5 bg-light">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center gap-5 ">
+        {% comment %} <div class="d-flex flex-wrap align-items-center justify-content-center gap-5 ">
             <img class="brand-logo" src="{% static '/img/brand-logos/512px-Amazon_logo.svg.png' %}" alt="" height="40">
             <img class="brand-logo" src="{% static '/img/fedex-express-6.svg' %}" alt="" height="40">
-        </div>
+        </div> {% endcomment %}
 
+         <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="row g-0 mb-3">
+                    <div class="col-sm-6 mb-4 wow zoomIn" data-wow-delay="0.2s">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Reliable</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
+                    </div>
+                    <div class="col-sm-6 mb-4 wow zoomIn" data-wow-delay="0.4s">
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 col-12">
+                        <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h5 class="mb-2">Call to ask any question</h5>
+                                <a class="text-decoration-none" href="tel:+353873875175"><h4 class="text-primary mb-0"> +353 87 387 5175</h4></a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-6 col-sm-12 col-12">
+                        <a class="btn btn-primary btn-new-form py-3 px-5 wow zoomIn" data-wow-delay="0.9s" data-bs-toggle="modal" data-bs-target="#exampleModal">Request a Free Quote</a>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+            
+        </div>
     </div>
 </section>
 
-<section class="container-fluid py-5 ">
+
+<section id="howitwork" class="container-fluid py-5">
+    <div class="container">
+        <h1 class="mx-auto text-center text-uppercase py-4 fw-bold mb-3">How we work</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 col-12 p-3">
+                <div class="how-we-work-card ">
+                    <img src="{% static '/img/Get-quote.png' %}" class="mb-3"  alt="">
+                    <h4 class="text-secondary"> Get a Quote</h4>
+                    <p>Fill out a quick, free quote form with details of your move, including the destination, items to be transported, and any specific requirements. We’ll respond promptly with an estimated quote.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 p-3">
+                <div class="how-we-work-card  ">
+                    <img src="{% static '/img/Confir-booking.png' %}"  class="mb-3"  alt="">
+                    <h4 class="text-secondary"> Confirm Your Booking</h4>
+                    <p>
+                        Once you’ve selected a service, confirm your booking and arrange any additional support you may need, such as packing, loading, or unloading.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 p-3">
+                <div class="how-we-work-card  ">
+                    <img src="{% static '/img/moving-day.png' %}"  class="mb-3"   alt="">
+                    <h4 class="text-secondary"> Delivering Safely</h4>
+                    <p>
+                       Our team will arrive as scheduled, carefully load your items into the van, and transport them securely to your new location. This process is designed to provide a smooth, worry-free experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="clients-review" class="container-fluid py-5 ">
     <div class="container-xxl">
         <h1 class="mx-auto text-center py-4 fw-bold mb-5">See What Our Happy 😊 Client Says</h1>
         <div class="swiper testimonialSwiper">
@@ -191,7 +297,7 @@
                             <i class="fas fa-star"></i>
                         </div>
                         <p>
-                            "I want to thank the team at Bark for resolving my issue quickly and effectively. They paid close attention to the details I requested and executed them precisely. The driver, Thabani, was very helpful in delivering carefully and right to the requested destination."
+                            "I want to thank the team for resolving my issue quickly and effectively. They paid close attention to the details I requested and executed them precisely. The driver, Thabani, was very helpful in delivering carefully and right to the requested destination."
                         </p>  
                         <div class="review-user">
                             <!-- <img class="review-user-image border border-secondary " src="./img/user-circle-solid.svg" alt="" width="50" height="50" > -->
@@ -485,7 +591,8 @@
 <section class="container-fluid py-5  wow fadeInUp" data-wow-delay="0.1s" id="about"> 
 
 <div class="container-xxl">
-        <h1 class="text-uppercase fw-bold text-center mb-5"> About Us</h1>
+         <h1 class="text-uppercase fw-bold text-center mb-3"> About Us</h1>
+        <h4  class=" fw-bold text-center mb-5">Reliable help when you need it</h4>
 
 
         <div class="row g-5">
@@ -511,14 +618,14 @@
                 </div>
                 <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
                     <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                        <i class="fa fa-phone-alt text-white"></i>
+                        <a href="tel:+353873875175"><i class="fa fa-phone-alt text-white"></i></a>
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-2">Call to ask any question</h5>
-                        <h4 class="text-primary mb-0"> +353 87 387 5175</h4>
+                        <a class="text-decoration-none" href="tel:+353873875175"><h4 class="text-primary mb-0"> +353 87 387 5175</h4></a>
                     </div>
                 </div>
-                <a href="quote.html" class="btn btn-primary btn-new-form py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
+                <a  class="btn btn-primary btn-new-form py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s"  data-bs-toggle="modal" data-bs-target="#exampleModal">Request a Free Quote</a>
             </div>
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
@@ -550,25 +657,58 @@
                    
                     <form method="post" action="{% url 'homepage' %}">
                         {% csrf_token %}
-                        <div class="row gap-3">
-                            <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-12 mb-3">
                                 {{ form.name }}
+                                 {% if form.name.errors %}
+                                    <div class="error text-decoration-none text-danger">
+                                        {{ form.name.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12 col-12 mb-3">
                                 {{ form.phone_number }}
+                                {% if form.phone_number.errors %}
+                                    <div class="error text-decoration-none text-danger">
+                                        {{ form.phone_number.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
+                            {{ form.email}}
+                            {% if form.email.errors %}
+                                <div class="error text-decoration-none text-danger">
+                                    {{ form.email.errors }}
+                                </div>
+                            {% endif %}
+                            </div>
+                            <div class="col-12 mb-3">
                                 {{ form.subject }}
+                                 {% if form.subject.errors %}
+                                    <div class="error text-decoration-none text-danger">
+                                        {{ form.subject.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
                                 {{ form.message }}
+                                {% if form.message.errors %}
+                                    <div class="error text-decoration-none text-danger">
+                                        {{ form.message.errors }}
+                                    </div>
+                                {% endif %}
                             </div>
                             <div class="w-auto">
                                 <button class="btn btn-primary btn-new-form w-100 py-3" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
-                    
+
+                    {% if success_message %}
+                        <div class="alert alert-success mt-4" role="alert">
+                            {{ success_message }}
+                        </div>
+                    {% endif %}                   
                 </div>
             </div>
         </div>
@@ -585,7 +725,7 @@
  <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container-xxl">
         <div class="row gx-0 justify-content-center">
-            <div class="row gx-5">
+            <div class="row p-0">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-footer-special p-4">
                         <a href="index.html" class="navbar-brand">
@@ -596,16 +736,10 @@
                             Our Man with a Van service in Dublin is designed to meet your unique needs and budget. 
                             We pride ourselves on being experienced, reliable, and affordable.
                         </p>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
-                    <div class="row gx-5">
+                    <div class="row">
                         <div class="col-lg-6 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
                                 <h3 class="text-light mb-0">Get In Touch</h3>
@@ -613,17 +747,21 @@
                         
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-danger me-2"></i>
-                                <p class="mb-0">service@lompatlogistics.ie</p>
+                                 <a href="mailto:tsbvans@gmail.com" class="text-light text-decoration-none">
+                                    tsbvans@gmail.com
+                                </a>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-danger me-2"></i>
-                                <p class="mb-0">+353 87 387 5175</p>
+                                <a href="tel:+353873875175" class=" text-light text-decoration-none" style="color: rgba(var(--bs-light-rgb),var(--bs-text-opacity))">
+                                     +353 87 387 5175
+                                </a>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-danger btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-danger btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-danger btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-danger btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-danger btn-square me-2" href="https://x.com/tsbvans"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-danger btn-square me-2" href="https://www.facebook.com/profile.php?id=61565337711864"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-danger btn-square me-2" href="https://www.linkedin.com/in/tsbvans-manwithavan"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-danger btn-square" href="https://www.instagram.com/tsbvans/"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
                         </div>
         
@@ -648,7 +786,7 @@
         <div class="row justify-content-end">
             <div class="col-lg-8 col-md-6">
                 <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">TSBVANS</a>. All Rights Reserved. 
+                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="/">TSBVANS</a>. All Rights Reserved. 
                     
                   
                 </div>
@@ -658,7 +796,133 @@
 </div>
 <!-- Footer End -->
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Get a Free Quote</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <div id="quoteFormAlert" class="alert d-none"></div>
+        <form id="quoteForm" class="row g-3">
+          <!-- From Location -->
+          <div class="col-md-6 col-sm-12">
+            <label for="from_location" class="form-label">Pick-Up Address:</label>
+            <select id="from_location" name="from_location" class="form-select" required>
+              <option value="" selected disabled>Choose Collection Location</option>
+              <option>Dublin 1</option>
+              <option>Dublin 2</option>
+              <option>Dublin 3</option>
+              <option>Dublin 4</option>
+              <option>Dublin 5</option>
+              <option>Dublin 6</option>
+              <option>Dublin 6W</option>
+              <option>Dublin 7</option>
+              <option>Dublin 8</option>
+              <option>Dublin 9</option>
+              <option>Dublin 10</option>
+              <option>Dublin 11</option>
+              <option>Dublin 12</option>
+              <option>Dublin 13</option>
+              <option>Dublin 14</option>
+              <option>Dublin 15</option>
+              <option>Dublin 16</option>
+              <option>Dublin 17</option>
+              <option>Dublin 18</option>
+              <option>Dublin 20</option>
+              <option>Dublin 22</option>
+              <option>Dublin 24</option>
+            </select>
+          </div>
 
+          <!-- To Location -->
+          <div class="col-md-6 col-sm-12">
+            <label for="to_location" class="form-label">Drop-Off Address:</label>
+            <select id="to_location" name="to_location" class="form-select" required>
+              <option value="" selected disabled>Choose Delivery Location</option>
+              <option>Dublin 1</option>
+              <option>Dublin 2</option>
+              <option>Dublin 3</option>
+              <option>Dublin 4</option>
+              <option>Dublin 5</option>
+              <option>Dublin 6</option>
+              <option>Dublin 6W</option>
+              <option>Dublin 7</option>
+              <option>Dublin 8</option>
+              <option>Dublin 9</option>
+              <option>Dublin 10</option>
+              <option>Dublin 11</option>
+              <option>Dublin 12</option>
+              <option>Dublin 13</option>
+              <option>Dublin 14</option>
+              <option>Dublin 15</option>
+              <option>Dublin 16</option>
+              <option>Dublin 17</option>
+              <option>Dublin 18</option>
+              <option>Dublin 20</option>
+              <option>Dublin 22</option>
+              <option>Dublin 24</option>
+              <option disabled>Additional Dublin Areas:</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+
+          <!-- Name -->
+          <div class="col-md-6 col-sm-12">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Full Name" required>
+          </div>
+
+          <!-- Phone -->
+          <div class="col-md-6 col-sm-12">
+            <label for="phone" class="form-label">Phone:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone Number" required>
+          </div>
+
+          <!-- Email -->
+          <div class="col-md-12 col-sm-12">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email Address" required>
+          </div>
+
+          <!-- Message -->
+          <div class="col-md-12 col-sm-12">
+            <label for="message" class="form-label">Message:</label>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
+              <label for="message">List Items Here...</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary btn-new-form" id="submitQuote">Send Request</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for success message
+    var successMessage = document.querySelector('.alert-success');
+    // Check for form errors
+    var errorMessages = document.querySelectorAll('.error');
+
+    if (successMessage || errorMessages.length > 0) {
+        // Scroll to the form
+        var formElement = document.getElementById('contactus');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+});
+</script>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-danger btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -667,14 +931,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <!-- <script src="lib/owlcarousel/owl.carousel.min.js' }"></script> -->
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -682,15 +946,15 @@
     var swiper = new Swiper(".testimonialSwiper", {
     //   slidesPerView: 3,
       spaceBetween: 30,
-    //   loop: true,
+     loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
-    //   autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    //   },
+       autoplay: {
+         delay: 3000,
+         disableOnInteraction: false,
+       },
       breakpoints: {
         640: {
           slidesPerView: 1,
@@ -712,6 +976,130 @@
       },
     });
 </script>
+
+ <script>
+    // Function to get CSRF token from cookies
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+    // Function to check if HTTP method requires CSRF protection
+    function csrfSafeMethod(method) {
+        // These HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/i.test(method));
+    }
+
+    // Setup AJAX to include CSRF token in the header
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !settings.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+    $(document).ready(function() {
+        $('#submitQuote').on('click', function(e) {
+            e.preventDefault();
+
+            // Serialize form data
+            var formData = $('#quoteForm').serialize();
+
+            // Disable the button and show sending text
+            $('#submitQuote').prop('disabled', true).text('Sending...');
+
+            // Clear previous errors
+            $('#quoteFormAlert').removeClass('d-none alert-success alert-danger').text('');
+            $('.is-invalid').removeClass('is-invalid');
+            $('.invalid-feedback').remove();
+
+            $.ajax({
+                type: 'POST',
+                url: '/submit-quote/', // Update if necessary
+                data: formData,
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        $('#quoteFormAlert').removeClass('d-none alert-danger').addClass('alert-success').text(response.message);
+                        $('#quoteForm')[0].reset();
+                        setTimeout(function() {
+                            $('#exampleModal').modal('hide');
+                            $('#quoteFormAlert').addClass('d-none').removeClass('alert-success').text('');
+                        }, 2000);
+                    } else {
+                        $('#quoteFormAlert').removeClass('d-none alert-success').addClass('alert-danger').text('An unexpected error occurred.');
+                        // Re-enable the submit button
+                        $('#submitQuote').prop('disabled', false).text('Send Request');
+                    }
+                },
+                error: function(xhr) {
+                    if (xhr.status === 400 && xhr.responseJSON && xhr.responseJSON.errors) {
+                        var errors = xhr.responseJSON.errors;
+
+                        // Parse the errors string into an object
+                        try {
+                            errors = JSON.parse(errors);
+                        } catch (e) {
+                            console.error('Error parsing errors:', e);
+                            errors = {};
+                        }
+
+                        var errorMessages = '';
+
+                        $.each(errors, function(field, fieldErrors) {
+                            var input = $('#' + field);
+                            input.addClass('is-invalid');
+                            $.each(fieldErrors, function(index, errorObj) {
+                                var errorMessage = errorObj.message;
+                                if (input.next('.invalid-feedback').length === 0) {
+                                    input.after('<div class="invalid-feedback">' + errorMessage + '</div>');
+                                } else {
+                                    input.next('.invalid-feedback').append('<div>' + errorMessage + '</div>');
+                                }
+                            });
+
+                            errorMessages += '<strong>' + field.charAt(0).toUpperCase() + field.slice(1) + ':</strong> ';
+                            $.each(fieldErrors, function(index, errorObj) {
+                                errorMessages += errorObj.message + ' ';
+                            });
+                            errorMessages += '<br>';
+                        });
+
+                    } else {
+                        $('#quoteFormAlert').removeClass('d-none alert-success').addClass('alert-danger').text('There was an error sending your request. Please try again later.');
+                    }
+                    // Re-enable the submit button
+                    $('#submitQuote').prop('disabled', false).text('Send Request');
+                },
+                complete: function() {
+                    // Ensure the submit button is re-enabled
+                    $('#submitQuote').prop('disabled', false).text('Send Request');
+                }
+            });
+        });
+
+        // Re-enable the submit button when the user makes changes
+        $('#quoteForm').on('input change', function() {
+            $('#submitQuote').prop('disabled', false).text('Send Request');
+        });
+    });
+</script>
+
+
+
 </body>
 
 </html>
