@@ -29,6 +29,8 @@ class ContactMessage(models.Model):
 class Quote(models.Model):
     from_location = models.CharField(max_length=50)
     to_location = models.CharField(max_length=50)
+    other1 = models.CharField(max_length=50, blank=True, null=True)
+    other2 = models.CharField(max_length=50, blank=True, null=True)
     name = models.CharField(max_length=100)
     phone = models.CharField(max_length=20)
     email = models.EmailField()

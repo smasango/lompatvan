@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.tsbvans.ie', 'tsbvans.ie']
+ALLOWED_HOSTS = ['www.tsbvans.ie', 'tsbvans.ie', '46.101.93.212']
 
 
 INSTALLED_APPS = [

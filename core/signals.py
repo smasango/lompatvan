@@ -26,9 +26,10 @@ def send_contact_message_notification(sender, instance, created, **kwargs):
         Sent on: {instance.formatted_created_at}
         """
         from_email = settings.DEFAULT_FROM_EMAIL
-        recipient_list = [settings.DEFAULT_RECIPIENT_EMAIL, 'smasango@gmail.com', 'advisorayush@gmail.com']
+        recipient_list = [settings.DEFAULT_RECIPIENT_EMAIL, 'smasango@gmail.com']
 
         try:
+            # print(message)
             send_mail(subject, message, from_email, recipient_list, fail_silently=True)
             customer_update(instance.email, instance.name)
         except Exception as e:
@@ -36,7 +37,7 @@ def send_contact_message_notification(sender, instance, created, **kwargs):
 
 
 @receiver(post_save, sender=Quote)
-def send_contact_message_notification(sender, instance, created, **kwargs):
+def send_quote_notification(sender, instance, created, **kwargs):
     if created:
         subject = f"New Quote Request from {instance.name}"
         message = f"""
@@ -44,8 +45,8 @@ def send_contact_message_notification(sender, instance, created, **kwargs):
 
         Name: {instance.name}
         Phone Number: {instance.phone}
-        from: {instance.from_location}
-        to: {instance.to_location}
+        from: {instance.from_location if instance.from_location != 'Other' else instance.other1}
+        to: {instance.to_location if instance.to_location != 'Other' else instance.other2}
         
         Message:
         {instance.message}
@@ -55,6 +56,7 @@ def send_contact_message_notification(sender, instance, created, **kwargs):
         recipient_list = [settings.DEFAULT_RECIPIENT_EMAIL, 'smasango@gmail.com']
 
         try:
+            # print(message)
             send_mail(subject, message, from_email, recipient_list, fail_silently=True)
             customer_update(instance.email, instance.name)
         except Exception as e:
@@ -65,10 +67,16 @@ def customer_update(recipient, name):
     message=f"""
     Dear {name},
 
-    Thank you for reaching out to TSBVANS! We appreciate your interest in our services. A member of our team will review your request and get back to you as soon as possible with a detailed quote. Please feel free to share any specific details about your move or delivery needs if you haven't already.
+    Thank you for reaching out to TSBVANS! 
+    We appreciate your interest in our services. 
+    A member of our team will review your request 
+    and get back to you as soon as possible with a 
+    detailed quote.
     
     Best regards,
     TSBVANS
+    +353 89 087 1091
+    
     """
     rc_list = [recipient,]
     from_email = settings.DEFAULT_FROM_EMAIL

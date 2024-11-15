@@ -246,3 +246,7 @@
         display: none;
     }
 }
+
+.swiper-pagination-bullet-active{
+    background-color:var(--bs-btn-bg-2) !important;
+}

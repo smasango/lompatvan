@@ -1,5 +1,5 @@
 # views.py
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactForm
 from .models import ContactMessage
 from django.http import JsonResponse
@@ -22,13 +22,9 @@ def homepage(request):
             )
             contact_message.save()
 
-            # Prepare a success message
-            success_message = "Your message has been sent successfully!"
-
-            # Re-initialize the form to display a blank form
-            form = ContactForm()
+            return redirect('success')
         else:
-            print(form.errors)
+            pass
     else:
         form = ContactForm()
 
@@ -49,3 +45,6 @@ def submit_quote(request):
         # Extract form errors
         errors = form.errors.as_json()
         return JsonResponse({'success': False, 'errors': errors}, status=400)
+
+def success(request):
+    return render(request, 'success.html')
